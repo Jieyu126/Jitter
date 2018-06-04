@@ -4,7 +4,12 @@ Example 1:
          #Generate MC samples using the model F=F(L, M, T)   
            
          import RVJitter   
-         target = RVJitter.rvjitter(lumi=12.006, lumierr=1.131, mass=1.304, masserr=0.064, teff=4963.00, tefferr=80.000)  
+         target = RVJitter.rvjitter(lumi=12.006,   
+                                    lumierr=1.131,   
+                                    mass=1.304,   
+                                    masserr=0.064,   
+                                    teff=4963.00,   
+                                    tefferr=80.000).   
          sigmarv, sigmarvperr, sigmarvmerr, mcsigmarv = target.rv() 
 
            
