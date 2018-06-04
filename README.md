@@ -1,7 +1,7 @@
 # Jitter
 Predicting RV jitter due to stellar oscillations, in terms of fundamental stellar properties.  
 Example 1:  
-         #Generate MC samples using the model F=F(L, M, T) 
+         #Generate MC samples using the model F=F(L, M, T)   
          ```python   
          import RVJitter   
          target = RVJitter.rvjitter(lumi=12.006, lumierr=1.131, mass=1.304, masserr=0.064, teff=4963.00, tefferr=80.000)  
