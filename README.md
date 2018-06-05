@@ -23,7 +23,8 @@ Example 1:
            
 Example 2:  
 
-         #Generate MC samples using the model F=F(L, M, T), and plot out.     
+         # Visualize the Monte Carlo simulation. 
+         # Predict RV jitter from luminosity, mass, and effectice temperature.     
          import RVJitter   
          target = RVJitter.rvjitter(lumi=12.006, lumierr=1.131, mass=1.304, masserr=0.064, teff=4963.00, tefferr=80.000)    
          sigmarv, sigmarvperr, sigmarvmerr, mcsigmarv = target.plot(figshow=True, figsave=True, figname='jitter.png')   
@@ -31,7 +32,8 @@ Example 2:
     
 Example 3:  
 
-         #Generate MC samples using the model F=F(L, T, g), and plot out.  
+         # Visualize the Monte Carlo simulation. 
+         # Predict RV jitter from luminosity, effectice temperature, and surface gravity.    
          import RVJitter  
          target = RVJitter.rvjitter(lumi=12.006, lumierr=1.131, teff=4963.00, tefferr=80.000, logg=3.210, loggerr=0.006)  
          sigmarv, sigmarvperr, sigmarvmerr, mcsigmarv = target.plot(figshow=True, figsave=True, figname='jitter.png')   
@@ -39,7 +41,8 @@ Example 3:
      
 Example 4:  
 
-         #Generate MC samples using the model F=F(T, g), and plot out.  
+         # Visualize the Monte Carlo simulation. 
+         # Predict RV jitter from effectice temperature and surface gravity   
          import RVJitter  
          target = RVJitter.rvjitter(teff=4963.00, tefferr=80.000,  logg=3.210, loggerr=0.006)  
          sigmarv, sigmarvperr, sigmarvmerr, mcsigmarv = target.plot(figshow=True, figsave=True, figname='jitter.png')  
@@ -47,7 +50,8 @@ Example 4:
     
 Example 5:  
 
-         #Generate MC samples using the model F=F(L, T), and plot out. Note   
+         # Visualize the Monte Carlo simulation. 
+         # Predict RV jitter from luminosity and effectice temperature.     
          import RVJitter  
          target = RVJitter.rvjitter(lumi=12.006, lumierr=1.131, teff=4963.00, tefferr=80.000, Lgiant=False)  
          sigmarv, sigmarvperr, sigmarvmerr, mcsigmarv = target.plot(figshow=True, figsave=True, figname='jitter.png')            
