@@ -15,7 +15,10 @@ This code is for the prediction of RV jitter due to stellar oscillations and gra
 ### Examples
 Example 1:  
 
-         #Generate MC samples using the model F=F(L, M, T)     
+         # Predict RV jitter median +/- one sigma, and MC simulation. Note that 
+         # The RV jitter is firstly predicted with sole contribution from stellar 
+         # oscillations, and then multiplied by a recommended (default) factor 
+         # of 1.6 to include an additional source, granulation.   
          import RVJitter   
          target = RVJitter.rvjitter(lumi=12.006, lumierr=1.131, mass=1.304, masserr=0.064, teff=4963.00, tefferr=80.000).   
          sigmarv, sigmarvperr, sigmarvmerr, mcsigmarv = target.rv() 
