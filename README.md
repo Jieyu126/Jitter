@@ -1,4 +1,4 @@
-# Jitter
+# RV Jitter (oscillations & granulation) prediction codes
 ## Predicting RV jitter due to stellar oscillations, in terms of fundamental stellar properties.  
 Example 1:  
 
