@@ -6,7 +6,7 @@ This code is for the prediction of RV jitter due to stellar oscillations and gra
     pip install pandas
     
     (1) Download source and place it in your Python path
-    git clone https://github.com/danxhuber/isoclassify
+    git clone https://github.com/Jieyu126/Jitter.git
     
     (2) Install from source
     setup.py install
