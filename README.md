@@ -1,5 +1,5 @@
 # RV Jitter (oscillations & granulation) prediction code
-This code is for the predictin of RV jitter due to stellar oscillations and granulation, in terms of various sets of fundamental stellar properties. Details are discribed in Yu et al (2018). If you make use of this code in your work, please cite our paper. 
+This code is for the prediction of RV jitter due to stellar oscillations and granulation, in terms of various sets of fundamental stellar properties. Details are discribed in Yu et al (2018). If you make use of this code in your work, please cite our paper. 
 
 ### Examples
 Example 1:  
