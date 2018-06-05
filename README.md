@@ -8,10 +8,7 @@ This code is for the prediction of RV jitter due to stellar oscillations and gra
     (1) Download source and place it in your Python path
     git clone https://github.com/Jieyu126/Jitter.git
     
-    (2) Install from source
-    setup.py install
-    
-    (3) Install with pip
+    (2) Install with pip
     pip install git+https://github.com/Jieyu126/Jitter.git
     
     
