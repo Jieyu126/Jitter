@@ -55,7 +55,8 @@ Example 4:
 Example 5:  
 
          # Visualize the Monte Carlo simulation. 
-         # Predict RV jitter from luminosity and effectice temperature.     
+         # Predict RV jitter from luminosity and effectice temperature. In this case, evolutationary stage must be 
+         # specified, via the keyword Lgiant, e.g. Lgiant=False
          import RVJitter  
          target = RVJitter.rvjitter(lumi=12.006, lumierr=1.131, teff=4963.00, tefferr=80.000, Lgiant=False)  
          sigmarv, sigmarvperr, sigmarvmerr, mcsigmarv = target.plot(figshow=True, figsave=True, figname='jitter.png')            
