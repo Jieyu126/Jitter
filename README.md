@@ -17,7 +17,7 @@ Example 1:
 
          # Predict RV jitter median +/- one sigma, and MC simulation. Note that 
          # the RV jitter is firstly predicted with sole contribution from stellar 
-         # oscillations, and then multiplied by a recommended factor, which differs in 
+         # oscillations, and then multiplied by a recommended factor, which differs slightly in 
          # different models, to include an additional source, granulation. You are able to 
          # change the factor via the keyword CorFact, e.g. CorFact=1.0
          import RVJitter   
