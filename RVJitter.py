@@ -55,8 +55,8 @@ class rvjitter(object):
           # A correction factor of 1.6 is recommended. 
           if CorFact is not None:
              self.CorFact = CorFact
-          else:
-             self.CorFact = 1.6
+          #else:
+          #   self.CorFact = 1.6
 
 
 
@@ -182,9 +182,10 @@ class rvjitter(object):
              np.random.seed(seed=7)
              mcdelta = self.lmt_delta+np.random.randn(self.nsample)*self.lmt_delta_sig
              # Compute the jitter samples              
-             mcsigmarv = self.CorFact * mcalpha * mclumi**mcbeta * mcmass**mcgamma * (mcteff/self.teffsun)**mcdelta
-
-
+             if hasattr(self,'CorFact'): 
+                mcsigmarv = self.CorFact * mcalpha * mclumi**mcbeta * mcmass**mcgamma * (mcteff/self.teffsun)**mcdelta
+             else: 
+                mcsigmarv = 1.93 * mcalpha * mclumi**mcbeta * mcmass**mcgamma * (mcteff/self.teffsun)**mcdelta
 
 
 
@@ -206,9 +207,10 @@ class rvjitter(object):
              np.random.seed(seed=14)
              mcepsilon = self.ltg_epsilon+np.random.randn(self.nsample)*self.ltg_epsilon_sig
              # Compute the jitter samples        
-             mcsigmarv = self.CorFact * mcalpha * mclumi**mcbeta * (mcteff/self.teffsun)**mcdelta * (mcgrav/self.gravsun)**mcepsilon
-
-
+             if hasattr(self,'CorFact'):
+                  mcsigmarv = self.CorFact * mcalpha * mclumi**mcbeta * (mcteff/self.teffsun)**mcdelta * (mcgrav/self.gravsun)**mcepsilon
+             else:
+                  mcsigmarv = 1.93 * mcalpha * mclumi**mcbeta * (mcteff/self.teffsun)**mcdelta * (mcgrav/self.gravsun)**mcepsilon
 
 
 
@@ -224,9 +226,11 @@ class rvjitter(object):
              mcdelta = self.tg_delta+np.random.randn(self.nsample)*self.tg_delta_sig            
              np.random.seed(seed=19)
              mcepsilon = self.tg_epsilon+np.random.randn(self.nsample)*self.tg_epsilon_sig            
-             # Compute the jitter samples        
-             mcsigmarv = self.CorFact * mcalpha * (mcteff/self.teffsun)**mcdelta * (mcgrav/self.gravsun)**mcepsilon
-
+             # Compute the jitter samples 
+             if hasattr(self,'CorFact'):
+                mcsigmarv = self.CorFact * mcalpha * (mcteff/self.teffsun)**mcdelta * (mcgrav/self.gravsun)**mcepsilon
+             else:
+                mcsigmarv = 2.01 * mcalpha * (mcteff/self.teffsun)**mcdelta * (mcgrav/self.gravsun)**mcepsilon                        
 
 
 
@@ -243,10 +247,11 @@ class rvjitter(object):
              mcbeta = self.lt_beta+np.random.randn(self.nsample)*self.lt_beta_sig
              np.random.seed(seed=24)
              mcdelta = self.lt_delta+np.random.randn(self.nsample)*self.lt_delta_sig
-             # Compute the jitter samples        
-             mcsigmarv = self.CorFact * mcalpha * mclumi**mcbeta * (mcteff/self.teffsun)**mcdelta
-
-
+             # Compute the jitter samples
+             if hasattr(self,'CorFact'):
+                mcsigmarv = self.CorFact * mcalpha * mclumi**mcbeta * (mcteff/self.teffsun)**mcdelta
+             else: 
+                mcsigmarv = 1.87 * mcalpha * mclumi**mcbeta * (mcteff/self.teffsun)**mcdelta
           else:  
                print('Input data does not apply to any of the four models')
                raise SystemExit
